@@ -8,15 +8,15 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 
-   <uses-permission android:name="android.permission.INTERNET" />
-		
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
-		android:name="my.twitter.app.TweetsSearch.Permission"
-		android:protectionLevel="dangerous"
-		android:label="@string/tweets_search_permission" 
-		android:description="@string/tweets_search_permission">		
-	</permission> 
-    
+        android:name="my.twitter.app.TweetsSearch.Permission"
+        android:description="@string/tweets_search_permission"
+        android:label="@string/tweets_search_permission"
+        android:protectionLevel="dangerous" >
+    </permission>
+
     <application
         android:name=".MyTwitterApp"
         android:allowBackup="true"
@@ -24,25 +24,39 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".PostTweet"
-            android:label="@string/app_name" >
+            android:name=".ListOfEvents"
+            android:label="@string/app_unique_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name=".TweetsSearch"
-            android:permission="my.twitter.app.TweetsSearch.Permission"
-            android:label="@string/title_activity_tweets_search" >
-            
-            <intent-filter >
-                <action android:name="action.Activity.TweetsSearch"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+            android:label="@string/title_activity_tweets_search"
+            android:permission="my.twitter.app.TweetsSearch.Permission" >
+            <intent-filter>
+                <action android:name="action.Activity.TweetsSearch" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            
+        </activity>
+        <activity
+            android:name=".CreateEvent"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Create Event" >
+        </activity>
+        <activity
+            android:name=".AddNominee"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Add Nominee" >
+        </activity>
+        
+        <activity
+            android:name=".ViewSettings"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="View Settings" >
         </activity>
         
     </application>

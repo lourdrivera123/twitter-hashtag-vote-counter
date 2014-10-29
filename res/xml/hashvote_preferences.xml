@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <CheckBoxPreference 
+        android:key="pref_display_tweets" 
+        android:title="Display all tweets gathered"
+        android:summary="Check if you want to display all the tweets tha have gathered" />
+    
+     <CheckBoxPreference 
+        android:key="pref_display_charts" 
+        android:title="Enable result visualization"
+        android:summary="Check if you want to have result visualization" />
+     
+     <ListPreference
+            android:key="pref_visualization"
+            android:title="Result Visualization"
+            android:summary="Choose what type of chart"
+            android:entries="@array/chart_entry"
+            android:entryValues="@array/chart_value"
+            android:dependency="pref_display_charts" />
+    
+</PreferenceScreen>

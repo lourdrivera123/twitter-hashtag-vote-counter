@@ -7,5 +7,6 @@
     <string name="search">search</string>
     <string name="title_activity_tweets_search">Tweets Search</string>
      <string name="tweets_search_permission">Tweets Search Permission</string>
+     <string name="app_unique_name">HashToVote</string>
 
 </resources>
